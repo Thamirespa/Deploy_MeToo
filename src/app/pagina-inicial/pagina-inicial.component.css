@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.fs-54 {
+  font-size: 54pt;
+}
+
+.fs-18 {
+  font-size: 18pt;
+}
+
+.fundo {
+  background-image: url(https://i.ibb.co/VCVz2nD/Mee-Too-6.png
+  );
+
+  min-height: 695px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-postagens {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(-45deg,
+      #5c4f79 0%,
+      #5c4f79 100%);
+  animation: AnimateBG 20s ease infinite;
+}
+
+.bg-transparente {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.bg-transparente-menu {
+  background: rgba(22, 2, 66, 0.7);
+}
+
+.text-links-nav {
+  color: rgb(174, 206, 255);
+}

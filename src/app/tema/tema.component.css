@@ -1,0 +1,13 @@
+.fundo {
+  background-image: url();
+
+  min-height: 695px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-transparente-menu {
+  background: rgba(22, 2, 66, 0.7);
+}

@@ -1,0 +1,28 @@
+<div class="container-fluid bg-atualizarTema ">
+  <div class="container ">
+    <div class="row">
+
+      <div class=" col-md-9">
+
+        <h1 class="text-center my-5 mb-5">Atualizar Tema</h1>
+
+        <div>
+          <div class="form-group">
+            <label for="titulo">Descricao do tema:</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a nova descrição do tema" [(ngModel)]="tema.publicacao">
+          </div>
+          <div class="form-group">
+            <label for="titulo">Descricao do forum:</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a nova descrição do forum" [(ngModel)]="tema.forum">
+          </div>
+          <div class="d-flex justify-content-center mb-5 mt-5">
+            <button type="button" class="btn btn-info m-2 w-25" (click)="atualizarTema()">Salvar</button>
+            <button type="button" class="btn btn-outline-danger m-2 w-25" routerLink="/tema">Cancelar</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

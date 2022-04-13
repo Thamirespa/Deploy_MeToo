@@ -1,0 +1,30 @@
+<div class="container-fluid bg-atualizarTema">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-10">
+                <h1 class="text-center text-secondary font-weight-bold mt-5 mb-5">Apagar Tema</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-10 mb-3">
+                <h4>Você tem certeza que deseja apagar esse tema? 
+                Todas as postagens  relacionadas  a ele serão excluidas.</h4>
+            </div>
+        </div>
+        
+        <div class="row ">
+            <div class="col-md-10 mb-3">
+            <h5 class="text-center text-primary">Tema: {{tema.publicacao}}</h5>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-10 d-flex justify-content-center mb-5 mt-3">
+                <button class="btn btn-outline-danger  w-25 mr-4" routerLink='/tema'>Não</button>
+                <button class="btn btn-outline-success w-25 " (click)='apagar()'>Sim</button>
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<nav class="bg navbar-expand-lg ">
+  
+  <a class="ml-3" routerLink="/pagina-inicial"> <img src="https://i.ibb.co/y0D3KnY/Mee-Too-7.png" alt=""width="85px" height="85px" > </a>
+
+  <form class="form-inline ml-5">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <div class="collapse navbar-collapse sidebar mr-3  mb-2 " id="conteudoNavbarSuportado">
+    
+    <ul class="navbar-nav ml-auto d-flex align-items-end">
+      
+      <li>
+        <a  routerLink="/pagina-inicial"><img class="mr-2 mt-2 mb-2" src="https://i.imgur.com/PF40fDZ.png" alt="" width="40px"></a>
+      </li>
+
+      <li>
+        <a  [routerLink]="['/usuario-edit', id]"><img class="mr-2 mt-2 mb-2" src="https://i.imgur.com/RanVaqm.png" alt="" width="40px"></a>
+      </li>
+
+      <li>
+        <a  (click)='sair()'><img class="mr-3 mt-2 mb-2" src="https://i.imgur.com/IW6plfW.png" alt="" width="40px"></a>
+      </li>
+
+      <li>
+        <a  ><img class="mr-3 mt-2 mb-2" src="https://i.imgur.com/NkArWDY.png" alt="" width="40px"></a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav> 
+
+
+
+

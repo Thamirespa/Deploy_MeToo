@@ -1,0 +1,107 @@
+<div class="container-fluid fundo">
+  <!--FORMULARIO PARA CADASTRO DE TEMAS-->
+  <div class=" ">
+      <div class="row bg-transparente-menu ">
+          <div class="col-md-12 text-white">
+              <!-- <a routerLink='/pagina-inicial' class="text-white text-left">
+                  <i class="fa fa-angle-double-left" aria-hidden="true"></i>Inicio
+              </a> -->
+              <h1 class="fs-54 text-center">Temas e Foruns</h1>
+              <h5 class="fs-18 text-center" >Veja aqui todos os temas e foruns cadastrados ou cadastre um novo:</h5>
+          </div>
+      </div>
+      <div class="row d-flex justify-content-center bg-transparente-menu">
+          <hr>
+          <!--FORMS DO TEMA DE POSTAGENS-->
+          <div class="col-md-9 mt-5 justify-content-center">
+              <h4 class="text-center text-white mb-3">Cadastro de Temas:</h4>
+              <div class="form-group">
+                  <input [(ngModel)]="tema.publicacao" type="text" class="form-control" id="descricao" placeholder="Digite o nome do tema que deseja cadastrar">
+              </div>
+              <div class="d-flex justify-content-center">
+                  <button class="btn btn-light" (click)="cadastrarTema()">Cadastrar</button>
+              </div>
+          </div>
+          <!--/FORMS DO TEMA DE POSTAGENS-->
+          <hr>
+          <!--FORMS DO FORUM-->
+          <div class="col-md-9 mt-5 mb-4">
+              <h4 class="text-center text-white mb-3">Cadastro de Foruns:</h4>
+              <div class="form-group">
+                  <input  [(ngModel)]="tema.forum" type="text" class="form-control" id="descricao" placeholder="Digite o nome do forum que deseja cadastrar">
+              </div>
+              <div class="d-flex justify-content-center">
+                  <button class="btn btn-light" (click)="cadastrarTema()">Cadastrar</button>
+              </div>
+          </div>
+          <!--FORMS DO FORUM-->
+      </div>
+  </div>
+   <!--FORMULARIO PARA CADASTRO DE TEMAS-->
+
+  <!--TABELA DE TEMAS CADASTRADOS-->
+  <div class="container-fluid" >
+      <div class="row mt-5">
+          <div class="col-md-12">
+              <h2 class="text-center">Todos os temas</h2>
+          </div>
+      </div>
+      <div class="row mt-3 mb-5 d-flex justify-content-center">
+          <div class="col-md-6">
+              <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Descrição</th>
+                          <th scope="col" lass="text-rigth">Modificações</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let tema of listaTema">
+                          <th scope="row">{{tema.id}}</th>
+                          <td>{{tema.publicacao}}</td> 
+                          <td>
+                              <a [routerLink]="['/tema-edit', tema.id]"><i class="fa fa-pencil-square-o ml-2" aria-hidden="true"></i></a> 
+                              <a [routerLink]="['/tema-delete',tema.id]"><i class="fa fa-trash ml-2" aria-hidden="true"></i></a>
+                          </td> 
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+  <!--/TABELA DE TEMAS CADASTRADOS-->
+
+  <!--TABELA DE FORUNS CADASTRADOS-->
+  <div class="container-fluid" >
+      <div class="row mt-5">
+          <div class="col-md-12">
+              <h2 class="text-center">Todos os Foruns</h2>
+          </div>
+      </div>
+      <div class="row mt-3 mb-5 d-flex justify-content-center">
+          <div class="col-md-6">
+              <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Descrição</th>
+                          <th scope="col" lass="text-rigth">Modificações</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let tema of listaTema">
+                          <th scope="row">{{tema.id}}</th>
+                          <td>{{tema.forum}}</td> 
+                          <td>
+                              <a [routerLink]="['/tema-edit',tema.id]"><i class="fa fa-pencil-square-o ml-2" aria-hidden="true"></i></a> 
+                              <a [routerLink]="['/tema-delete',tema.id]"><i class="fa fa-trash ml-2" aria-hidden="true"></i></a>
+                          </td> 
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+  <!--/TABELA DE FORUNS CADASTRADOS-->
+</div>

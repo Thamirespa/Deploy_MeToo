@@ -1,0 +1,62 @@
+.bg-atualizarTema {
+  background-image: url(https://i.imgur.com/45HPLFn.png);
+
+
+  min-height: 350px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-login02 {
+
+  box-shadow: 1px 5px 30px #ca69e2;
+}
+
+div.infoUser {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+
+div.imgUser {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #333;
+
+}
+
+div.infoUser strong {
+  font-size: 16px;
+  margin-left: 10px;
+
+}
+
+.bg-card-delete {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(-45deg,
+      #5c4f79 0%,
+      #5c4f79 100%);
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}

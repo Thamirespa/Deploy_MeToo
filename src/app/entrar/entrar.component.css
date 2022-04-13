@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
+
+/** {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}
+
+.bg-fundo {
+    background-color: #cb383e;
+}
+
+.bg-login {
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.container-fluid {
+    font-family: 'Brush Script MT';
+    font-size: x-large;
+    background-color: #cb383e;
+}
+
+.tx-titulo {
+    font-size: 28px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+}
+
+.tx-magento {
+    color: #cb383e;
+}
+
+input::placeholder {
+    color: #cb383e;
+    font-size: 14px;
+}
+
+#telaLogin {
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px #e57272;
+
+}*/
+
+#bg {
+    background-image: url(https://i.ibb.co/VQYkpr6/2.png);
+
+    min-height: 695px;
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#tela-login {
+    width: 400px;
+    height: 510px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px #9962B2;
+
+    background-color: #5c4f79;
+    ;
+    opacity: 0.9;
+
+}
+
+.bg-login {
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px #9962B2;
+}
+
+.bg-menu-dark {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(-45deg,
+            #5c4f79 0%,
+            #5c4f79 100%);
+    animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}

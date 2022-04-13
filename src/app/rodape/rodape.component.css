@@ -1,0 +1,60 @@
+ul.social-network { 
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa {
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+}
+
+.fa-facebook-official:hover {
+    color:#474545;
+}
+
+.fa-instagram:hover {
+    color: #474545;
+}
+
+.fa-github:hover {
+    color: #474545;
+}
+
+.fa-linkedin:hover {
+    color: #474545;
+}
+
+
+
+.bg {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(-45deg,
+            #5c4f79 0%,
+            #5c4f79 100%);
+    animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}

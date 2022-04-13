@@ -1,0 +1,10 @@
+.bg-atualizarTema {
+  background-image: url(https://i.imgur.com/LFT96Iz.png);
+
+
+  min-height: 400px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
