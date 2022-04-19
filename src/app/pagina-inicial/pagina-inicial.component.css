@@ -10,8 +10,7 @@
 }
 
 .fundo {
-  background-image: url(https://i.ibb.co/VCVz2nD/Mee-Too-6.png
-  );
+  background-image: url(https://i.imgur.com/w42GEys.png);
 
   min-height: 695px;
 
@@ -42,4 +41,25 @@
 
 .text-links-nav {
   color: rgb(174, 206, 255);
+}
+
+.cor-resp {
+  color: rgb(87, 247, 119);
+}
+
+.cor-novapost {
+  color: #32daf4
+}
+
+.bg-bt-post {
+  background-color: #18aec6;
+}
+
+.bg-bt-forum {
+  background-color: rgb(52, 181, 151);
+  ;
+}
+
+.cor-cancel {
+  color: #fb7f7f;
 }

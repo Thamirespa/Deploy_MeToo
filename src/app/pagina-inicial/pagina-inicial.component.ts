@@ -16,9 +16,7 @@ import { TemaService } from '../service/tema.service';
 export class PaginaInicialComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
-
   forum = environment.forum
-
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   idTema: number
@@ -27,8 +25,8 @@ export class PaginaInicialComponent implements OnInit {
   nome = environment.nome
   idUsuario = environment.id
 
-key = 'data'
-reverse = true
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
@@ -47,10 +45,10 @@ reverse = true
     this.getAllTemas()
     this.getAllPostagens()
   }
-  getAllTemas( ) {
+  getAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
-    
+
     })
   }
 
@@ -73,7 +71,6 @@ reverse = true
 
   }
 
-
   publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
@@ -85,9 +82,12 @@ reverse = true
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
     })
-
-
   }
 
+  findByForumTema() {
+    this.temaService.getByForumTema(this.forum).subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
 
 }

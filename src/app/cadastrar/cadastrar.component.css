@@ -1,31 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
 
-/** {
-    font-family: 'EB Garamond', serif;
-
-}
-
-.container-fluid {
-    font-family: 'Brush Script MT';
-    font-size: x-large;
-    background-color: #B680A9;
-}
-
-#img-bg {
-    background-image: url(https://img.freepik.com/vetores-gratis/desenho-de-avatar-de-mulheres-https://thumbs.dreamstime.com/b/mulheres-jovens-lendo-vetor-de-livro-do-220149461.jpgde-negocios_24640-52533.jpg);
-
-    min-height: 695px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.container-fluid {
-    font-family: 'Brush Script MT';
-    font-size: x-large;
-}*/
-
 
 #bg {
     background-image: url(https://i.ibb.co/X5JWfNH/Mee-Too-4.png);
@@ -45,8 +19,21 @@
     transform: translate(-50%, -50%);
     box-shadow: 1px 5px 30px #74C1B2;
 
-    background-color: #74C1B2;
+    background-color: #4ca0a7;
     ;
-    opacity: 0.9;
+    opacity: 0.95;
 
+}
+
+.bg-transparente {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.bg-bt-forum {
+    background-color: rgb(52, 181, 151);
+    ;
+}
+
+.cor-cancel {
+    background-color: #fb7f7f;
 }

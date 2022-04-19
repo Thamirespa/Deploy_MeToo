@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Postagem } from '../model/Postagem';
+import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,20 +18,18 @@ export class MenuComponent implements OnInit {
   id = environment.id
 
   constructor(
-    private router: Router
+    private router: Router,
+
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
-  sair(){
+  sair() {
     this.router.navigate(['/abertura'])
-    environment.token=''
-    environment.nome=''
-    environment.foto=''
-    environment.id= 0
+    environment.token = ''
+    environment.nome = ''
+    environment.foto = ''
+    environment.id = 0
   }
-
-
-
 }

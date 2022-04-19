@@ -42,6 +42,7 @@ import { AberturaComponent } from './abertura/abertura.component';
     HttpClientModule,
     FormsModule,
     OrderModule
+
   ],
   providers: [{
     provide: LocationStrategy,

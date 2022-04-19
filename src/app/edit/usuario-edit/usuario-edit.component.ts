@@ -46,14 +46,15 @@ export class UsuarioEditComponent implements OnInit {
     } else {
       this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
-        alert('Usuário cadastrado com sucesso')
-        this.router.navigate(['/pagina-inicial'])
+        alert('Usuário atualizado com sucesso')
+
         environment.token = ''
         environment.nome = ''
         environment.foto = ''
         environment.id = 0
 
-        /*this.router.navigate(['/entrar'])*/
+        this.router.navigate(['pagina-inicial'])
+
       })
     }
   }

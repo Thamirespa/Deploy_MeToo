@@ -5,7 +5,7 @@
     <!--MENU LATERAL-->
       <div class="col-4 mt-5 ">
         <div class="card bg-postagens bg-transparente-menu mb-2 ml-3" style=border-radius:25px; >
-          <div class="row  mt-3 mb-5">
+          <div class="row  mt-3 mb-3 mt-3">
             <div class="col-md-12   ">
               <div class="text-center">                 
                 <div >                   
@@ -14,8 +14,10 @@
                 <h6 class='mt-2 text-white'>{{nome}}</h6>                                
               </div>
               <div class=" text-center">
-                <button class="btn w-75 btn-primary mb-2 mt-3" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                <a class="btn w-75 btn-light " data-toggle="modal" data-target="#novoForum">Forum</a>
+                <button class="btn w-75 bg-bt-post text-white mb-2 mt-3" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                <a class="btn w-75 bg-bt-forum text-white" data-toggle="modal" 
+                [(ngModel)]='forum' ((click))='findByForumTema()'
+                data-target="#novoForum">Fórum</a>
                 </div>
             </div>
           </div>
@@ -61,18 +63,8 @@
       <!--TODAS AS POSTAGENS-->
       <div class="col-8">
         <div class="container mb-5 mt-5" id="postagens">
-        <!-- <h2 *ngIf='listaPostagens.length == 0' class="text-center text-secondary mt-5">
-          Não existem postagens ainda...
-        </h2>-->
         <div class="tab-content mt-5" id="nav-tabContent">
           <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
-            <!-- <div class="row d-flex justify-content-center mt-5 mb-5">
-              <div class="col-md-4">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="titulo" placeholder="Digite um titulo de postagem para pesquisar" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
-                </div>
-              </div>
-            </div>-->
             <div class="row">
               <div class="col-md-12 ">
                       <div class="card bg-postagens mb-3" style=border-radius:25px;
@@ -119,8 +111,8 @@
                     <p class="mt-3 text-justify">{{item.texto}}</p>
 
                     <div class="text-center">
-                      <a [routerLink]="['/postagem-edit', item.id]" class="text-info text-center mr-3" href="">Editar</a>
-                      <a [routerLink]="['/postagem-delete', item.id]" class="text-danger text-center" href="">Apagar</a>
+                      <a [routerLink]="['/postagem-edit', item.id]" class="cor-novapost text-center mr-3" href="">Editar</a>
+                      <a [routerLink]="['/postagem-delete', item.id]" class="cor-cancel text-center" href="">Apagar</a>
                     </div>
                 </div>
               </div>  
@@ -132,9 +124,6 @@
           <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
             <div class="row d-flex justify-content-center">
               <div class="col-md-4">
-                <!--<div class="form-group mb-5">
-                  <input type="text" class="form-control" id="tituloPesquisa" placeholder="Digite um tema para pesquisar" [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
-                </div> -->
               </div>
             </div>
             <div style=border-radius:25px; *ngFor='let tema of listaTemas'>
@@ -142,17 +131,17 @@
                 <div class="card-body text-white" >
                   <div class=" d-flex mt-2 justify-content-start align-items-center">                 
                     <div >                   
-                      <img class="imgUser mr-3 " src="{{foto}}" alt="" width="35px" height="35px" class="img-fluid rounded-circle">                 
+                      <img class="imgUser mr-3 " src="{{item.usuario.foto}}" alt="" width="35px" height="35px" class="img-fluid rounded-circle">                 
                     </div>                 
-                    <h6 class='ml-2 text-white'>{{nome}}<br>
+                    <h6 class='ml-2 text-white'>{{item.usuario.nome}}<br>
                       <p class="card-text "><small class="text-light">{{item.data}}</small></p> 
                     </h6>                           
                   </div>
                   <h5 class="card-title m-0 text-center mb-2">{{item.titulo}}</h5>
                   <p class="mt-3 text-justify">{{item.texto}}</p>
                   <div class="text-center">
-                    <a  class="text-info text-center mt-2 mr-3" href="">Respoder</a>
-                    <a  class="text-success text-center mt-2 " href="">Visualizar respostas</a>
+                    <a  class="cor-novapost cor-novapost text-center mt-2 mr-3" href="">Respoder</a>
+                    <a  class="cor-resp text-center mt-2 " href="">Visualizar respostas</a>
                   </div>
                 </div>
               </div>
@@ -164,10 +153,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 <!-- MODAL POSTAGEM -->
 <div class="modal fade bg-transparente" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
@@ -240,7 +225,7 @@
         </div>
 
         <div class="form-group text-white">
-          <label for="texto">Escolha um forum ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:
+          <label for="texto">Escolha um forum ou <a data-dismiss="modal" routerLink='/tema' class="cor-novapost">cadastre um novo</a>:
           </label>
           <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
             <option *ngFor='let item of listaTemas' value="{{item.id}}">
